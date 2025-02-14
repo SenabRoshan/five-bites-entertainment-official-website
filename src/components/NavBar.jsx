@@ -3,6 +3,7 @@ import logo from "../assets/LogoBlack.png"
 import '../index.css'
 import { MdMenu } from "react-icons/md";
 import RespNavBar from './RespNavBar'; // Adjust the path based on your file structure
+import { motion} from "framer-motion";
 
 const NavigationMenu = [
     {
@@ -36,7 +37,10 @@ function NavBar() {
     const [open, setOpen] = React.useState(false);
     return (
         <>
-            <nav>
+            <motion.nav
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ type: 'spring', stiffness: 100, damping: 45, delay: 0.8 }}>
                 <div className="container flex justify-between items-center py-4 md:pt-4">
                     <div className='text-2xl flex items-center gap-4 font-bold uppercase'>
                         <img 
@@ -54,8 +58,8 @@ function NavBar() {
                 
                     </div>
                     {/* Navigation */}
-                    <div className='hidden md:block '>
-                        <ul className='flex items-center gap-6 text-gray-600'>
+                    <div className='hidden xs:block '>
+                        <ul className='flex items-center gap-6 text-gray-600 md:gap-2'>
                             {NavigationMenu.map((menu) => (
                                 <li key={menu.id} className='text-3rem'>
                                     <a href={menu.link} className='inline-block py-1 px-3 font-semibold tracking-widest hover:text-primary relative group' >
@@ -70,15 +74,15 @@ function NavBar() {
                         </ul>
                     </div>
 
-                    <div className='md:hidden' onClick={() => setOpen(!open)}>
+                    <div className='xs:hidden'onClick={() => setOpen(!open)}>
                         <MdMenu className="text-4xl"/>                  
                     </div>
                 </div>
-            </nav>
+            </motion.nav>
 
             <RespNavBar open = {open} setOpen={setOpen}/>
         </>
   )
 }
 
-export default NavBar
+export default NavBar;

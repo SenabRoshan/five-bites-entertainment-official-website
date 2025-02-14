@@ -12,7 +12,8 @@ export default {
       },
 
       fontFamily: {
-        poppins: ["Poppins", "sans-serif"]
+        poppins: ["Poppins", "sans-serif"],
+        'varela': ['Varela Round', 'serif']
       },
 
       container: {
@@ -28,7 +29,16 @@ export default {
 
       spacing: {
         '7.5': '30rem', // Add a custom spacing value
-      }
+      },
+
+      backgroundImage: {
+        bannerImg: "url('/HomeBGR.png')",
+        projectImg: "url('/ProjectsThumb.png')"
+      },
+
+      screens: {
+        'xs': '830px'
+      },
 
     },
   },
