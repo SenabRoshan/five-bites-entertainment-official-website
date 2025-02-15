@@ -60,7 +60,7 @@ function Features() {
             <motion.img
                 src={image}
                 alt="Project Highlight"
-                className="pt-8 h-[700px] w-full"
+                className="pt-8 h-full w-full"
                 initial={{ opacity: 0, y:100}}  // Initially hidden and moved down
                 whileInView={{ opacity: 1, y:0}} // Fade in and slide up when in view
                 viewport={{ once: true, amount: 0.2 }} // Trigger when 50% of the element is in view

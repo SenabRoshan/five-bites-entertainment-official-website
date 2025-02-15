@@ -22,9 +22,9 @@ function Home() {
               initial={{ opacity: 0, y: -100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ type: 'spring', stiffness: 100, damping: 35, delay: 0.8 }}
-              className="text-2xl sm:text-3xl md:text-4xl leading-tight tracking-widest text-center pt-[5px] font-varela"
+              className="text-2xl sm:text-3xl md:text-4xl leading-tight tracking-widest text-center pt-[5px] "
             >
-              <span className="text-white px-2 font-bold">ENTERTAINMENT</span>
+              <span className="text-white px-2 font-semibold">ENTERTAINMENT</span>
             </motion.h1>
   
             {/* Third Heading */}
@@ -32,9 +32,9 @@ function Home() {
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ type: 'spring', stiffness: 100, damping: 30, delay: 0.7 }}
-              className="text-xl sm:text-2xl md:text-4xl leading-tight tracking-widest text-center pt-8"
+              className="text-xl sm:text-2xl md:text-4xl leading-tight tracking-widest text-center pt-14"
             >
-              <span className="text-white">INNOVATE. CREATE. INSPIRE!</span>
+              <span className="text-white font-extralight">INNOVATE. CREATE. INSPIRE!</span>
             </motion.h1>
           </div>
         </section>
